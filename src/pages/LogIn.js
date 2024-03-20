@@ -32,9 +32,9 @@ const LogIn = () => {
 
         if (isAuthenticated) {
             if (userInfo.role === 'admin') {
-                navigate('/admin/dashboard');
+                navigate('https://backend-blogers-app.onrender.com/api/admin/dashboard');
             } else {
-                navigate('/user/dashboard');
+                navigate('https://backend-blogers-app.onrender.com/api/user/dashboard');
             }
         }
 
