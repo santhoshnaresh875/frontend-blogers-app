@@ -18,7 +18,7 @@ const AdminDashboard = () => {
 
     const displayPost = async () => {
         try {
-            const { data } = await axios.get('/api/posts/show');
+            const { data } = await axios.get('https://backend-blogers-app.onrender.com/api/api/posts/show');
             setPosts(data.posts);
         } catch (error) {
             console.log(error);
@@ -35,7 +35,7 @@ const AdminDashboard = () => {
         // console.log(id)
         if (window.confirm("Are you sure you want to delete this post?")) {
             try {
-                const { data } = await axios.delete(`/api/delete/post/${id}`);
+                const { data } = await axios.delete(`https://backend-blogers-app.onrender.com/api/api/delete/post/${id}`);
                 if (data.success === true) {
                     toast.success(data.message);
                     displayPost();
