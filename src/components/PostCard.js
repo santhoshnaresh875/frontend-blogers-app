@@ -31,7 +31,7 @@ function PostCard({
     //add like
     const addLike = async () => {
         try {
-            const { data } = await axios.put(`/api/addlike/post/${id}`);
+            const { data } = await axios.put(`https://backend-blogers-app.onrender.com/api/api/addlike/post/${id}`);
             // console.log("likes", data.post);
             // if (data.success == true) {
             //     showPosts();
@@ -47,7 +47,7 @@ function PostCard({
     //remove like
     const removeLike = async () => {
         try {
-            const { data } = await axios.put(`/api/removelike/post/${id}`);
+            const { data } = await axios.put(`https://backend-blogers-app.onrender.com/api/api/removelike/post/${id}`);
             console.log("remove likes", data.post);
             if (data.success == true) {
                 showPosts();
